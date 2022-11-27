@@ -53,9 +53,10 @@
 			<div>
 				<form method="get" action="authors">
 					<div class="input-group mb-3">
-						<input type="search" name="query" class="form-control" placeholder="" aria-label=""
+						<input type="search" name="query" class="form-control" placeholder=""
+							value="@if(isset($_GET['query'])){{$_GET['query']}}@endif" aria-label=""
 							aria-describedby="button-addon2">
-						<button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+						<button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
 					</div>
 				</form>
 			</div>

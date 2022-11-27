@@ -12,6 +12,7 @@
 
 <body>
 	<div class="container vh-100 bg-light shadow">
+		@include('header')
 		<div class="border-bottom py-2">
 			<h1 class="h4">Authors</h1>
 		</div>

@@ -22,3 +22,5 @@ Route::get('/authors', [AuthorsController::class, 'index']);
 Route::get('/author/{id}', [AuthorsController::class, 'detail']);
 Route::get('/author/{id}/delete', [AuthorsController::class, 'delete']);
 Route::get('/book/{id}/delete', [BooksController::class, 'delete']);
+Route::get('/book', [BooksController::class, 'create']);
+Route::post('/book/store', [BooksController::class, 'store']);

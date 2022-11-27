@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<div class="container vh-100 bg-light shadow">
+	<div class="container bg-light shadow" style="min-height: 100vh;">
 		@include('header')
 		<div class="border-bottom py-2 d-flex justify-content-between">
 			<h1 class="h4">{{ $author['first_name'] . ' ' . $author['last_name'] }}</h1>

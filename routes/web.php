@@ -18,6 +18,8 @@ use App\Http\Controllers\BooksController;
 
 Route::get('/', [ClientsController::class, 'index']);
 Route::post('/login', [ClientsController::class, 'login']);
+Route::get('/logout', [ClientsController::class, 'logout']);
+Route::get('/profile', [ClientsController::class, 'profile']);
 Route::get('/authors', [AuthorsController::class, 'index']);
 Route::get('/author/{id}', [AuthorsController::class, 'detail']);
 Route::get('/author/{id}/delete', [AuthorsController::class, 'delete']);

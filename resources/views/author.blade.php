@@ -19,6 +19,22 @@
 				class="btn btn-danger btn-sm">Delete</a>
 			@endif
 		</div>
+		<div>
+			@if (session('messages') and isset(session('messages')['error']))
+			@foreach(session('messages')['error'] as $em)
+			<div class="alert alert-danger">
+				{{ $em }}
+			</div>
+			@endforeach
+			@endif
+			@if (session('messages') and isset(session('messages')['success']))
+			@foreach(session('messages')['success'] as $sm)
+			<div class="alert alert-success">
+				{{ $sm }}
+			</div>
+			@endforeach
+			@endif
+		</div>
 		<div class="pt-2">
 			<ul>
 				<li>First Name: {{$author['first_name']}}</li>
@@ -52,7 +68,7 @@
 						@foreach($author['books'] as $book)
 						<tr>
 							<td>
-								<a href="book/{{ $book['id'] }}/delete" class="btn btn-sm btn-danger"
+								<a href="{{url('/book/' . $book['id'] . '/delete')}}" class="btn btn-sm btn-danger"
 									onclick="return confirm('Are you sure delete book?')">Delete</a>
 							</td>
 							<td>{{ $book['id'] }}</td>
